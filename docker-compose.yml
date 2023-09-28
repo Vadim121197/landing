@@ -1,12 +1,12 @@
 version: '3'
 
 services:
-  front_asset_desk:
-    container_name: front_asset_desk
-    image: assetdesk:latest
+  landing:
+    container_name: landing
+    image: landing:latest
     build:
       context: .
-      dockerfile: ./apps/webapp/Dockerfile
+      dockerfile: ./apps/landing/Dockerfile
     restart: always
     ports:
       - 9017:3000

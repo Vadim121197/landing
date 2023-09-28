@@ -1,32 +1,36 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
 
 @layer base {
   :root {
-    --background: 0 0% 0%;
-    --foreground: 0 0% 100%;
+    --background: 0, 0%, 100%; /* White */
+    --foreground: 0, 0%, 0%; /* Black */
     --card: 0 0% 100%;
     --card-foreground: 240 10% 3.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 240 10% 3.9%;
-    --primary: 223 97% 46%;
+    --primary: 0, 0%, 100%; /* White */
     --primary-foreground: 223 88% 29%;
     --secondary: 0 0% 0%;
     --secondary-foreground: 240 5.9% 10%;
-    --muted: 0 0% 93%;
-    --muted-foreground: 0 5% 87%;
+    --muted: 0, 0%, 0%; /* Black */
+    --muted-foreground: 0, 0%, 100%; /* White */
     --accent: 240 4.8% 95.9%;
     --accent-foreground: 240 5.9% 10%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
+    --border: 0, 0%, 0%; /* Black */
+    --input: 0, 0%, 100%; /* White */
     --ring: 240 5% 64.9%;
-    --radius: 0.5rem;
+    --radius: 0rem;
 
-    --light-grey: #e3e3e3;
+    --blue: 226, 100%, 50%;
+    --sky: 189, 100%, 42%;
+    --whisper: 0, 0%, 90%; /* #E6E6E6 */
+    --dark-grey: 0, 0%, 67%; /* #ACACAC */
   }
 
   * {
@@ -34,68 +38,20 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-muted font-body text-xl font-medium;
   }
 
-  h1,
-  .h1 {
-    @apply font-poppins text-3xl font-semibold;
+  @font-face {
+    font-family: 'Conthrax';
+    font-weight: 600;
+    src: url('../fonts/conthrax.ttf') format('truetype');
   }
 
-  /* response */
-  h2,
-  .h2 {
-    @apply font-poppins text-lg font-semibold md:text-2xl;
+  .background-size-300-100 {
+    background-size: 300% 100%;
   }
 
-  /* response */
-  .title {
-    @apply font-poppins text-[1.875rem] font-semibold leading-10 md:text-4xl;
-  }
-
-  /* response */
-  .subtitle1 {
-    @apply font-inter text-base font-medium md:text-xl;
-  }
-  /* response */
-  .subtitle2 {
-    @apply font-inter text-sm font-semibold md:text-base;
-  }
-
-  /* response */
-  .subtitle3 {
-    @apply font-inter text-xs font-normal md:text-sm;
-  }
-
-  /* response */
-  button,
-  .btn {
-    @apply font-inter text-sm font-bold text-white md:text-base;
-  }
-
-  /* response */
-  .number {
-    @apply font-poppins text-base font-bold md:text-xl;
-  }
-
-  /* response */
-  .number2 {
-    @apply font-poppins text-xs font-medium md:text-sm;
-  }
-
-  .card-gradient {
-    background-image: linear-gradient(180deg, #010b22 0.28%, rgba(31, 71, 173, 0.8) 166.34%);
-  }
-
-  .card-gradient-secondary {
-    background-image: linear-gradient(
-      180deg,
-      rgba(34, 96, 255, 0.8) -19.68%,
-      rgba(13, 31, 78, 0.8) 125.53%
-    );
-  }
-
-  .border-gradient {
-    border-image: linear-gradient(to bottom, #0344e9, #0344e900) 1 100%;
+  .background-position-100-0 {
+    background-position: 100% 0;
   }
 }

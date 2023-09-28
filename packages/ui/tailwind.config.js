@@ -9,27 +9,17 @@ module.exports = {
     '../../packages/ui/components/**/*.{ts,tsx}',
   ],
   theme: {
-    fontSize: {
-      xs: ['0.75rem', '1.125rem'],
-      sm: ['0.875rem', '1.25rem'],
-      base: ['1rem', '1.5rem'],
-      lg: ['1.125rem', '1.75rem'],
-      xl: ['1.25rem', '1.875rem'],
-      '2xl': ['1.375rem', '2rem'],
-      '3xl': ['2rem', '2.5rem'],
-      '4xl': ['2.25rem', '3rem'],
-    },
     container: {
       center: true,
-      padding: '1.5rem',
+      padding: '0rem',
       screens: {
-        '2xl': '1400px',
+        '2xl': '1440px',
       },
     },
     extend: {
       fontFamily: {
-        inter: ['Inter', 'sans-serif'],
-        poppins: ['Poppins', 'sans-serif'],
+        body: ['Open Sans', 'sans-serif'],
+        headline: ['Conthrax', 'sans-serif'],
       },
       colors: {
         border: 'hsl(var(--border))',
@@ -65,9 +55,14 @@ module.exports = {
           DEFAULT: 'hsl(var(--card))',
           foreground: 'hsl(var(--card-foreground))',
         },
-        'light-grey': {
-          DEFAULT: 'var(--light-grey)',
+        blue: {
+          DEFAULT: 'hsl(var(--blue))',
         },
+        sky: {
+          DEFAULT: 'hsl(var(--sky))',
+        },
+        whisper: 'hsl(var(--whisper))',
+        'dark-grey': 'hsl(var(--dark-grey))',
       },
       borderRadius: {
         lg: 'var(--radius)',
@@ -100,8 +95,12 @@ module.exports = {
         },
       },
       backgroundImage: {
-        'card-gradient':
-          'linear-gradient(0deg, rgba(34, 96, 255, 0.80) 0%, rgba(13, 31, 78, 0.80) 100%))',
+        "gradient-button":
+          'linear-gradient(86deg, hsl(var(--sky)), hsl(var(--blue)), hsl(var(--blue)), hsl(var(--sky)))',
+        gradient: 'linear-gradient(86deg, hsl(var(--sky)), hsl(var(--blue)))',
+      },
+      backgroundPosition: {
+        'right-center': 'right center',
       },
     },
   },
