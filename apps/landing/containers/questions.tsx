@@ -12,28 +12,30 @@ export const Questions = () => {
           <div className='bg-gradient text-muted-foreground font-headline absolute top-[-31px] flex h-[62px] w-[416px] items-center px-[26px] text-[34px] uppercase leading-10'>
             learn
           </div>
-          <div className='flex flex-col gap-8'>
+          <div className='flex flex-col gap-8 items-start'>
             <p>
               Deep dive into summer.
               <br /> Functionalities and glossary
             </p>
             <div className='flex flex-col gap-5'>
               {['get started', 'tutorials', 'key concepts'].map((i, index) => (
-                <Link key={index} href='https://www.google.com/'>
-                  <div className='font-headline flex gap-1 uppercase transition-transform duration-200 hover:scale-110'>
-                    <p>{i}</p>
-                    <svg
-                      xmlns='http://www.w3.org/2000/svg'
-                      width='9'
-                      height='9'
-                      viewBox='0 0 9 9'
-                      fill='none'
-                      className='mt-2'
-                    >
-                      <path d='M1 1H8V8' stroke='black' strokeWidth='2' />
-                      <path d='M8 1L1 8' stroke='black' strokeWidth='2' />
-                    </svg>
-                  </div>
+                <Link
+                  key={index}
+                  href='https://www.google.com/'
+                  className='font-headline flex justify-start gap-1 uppercase transition-transform duration-200 hover:scale-110 '
+                >
+                  <p>{i}</p>
+                  <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    width='9'
+                    height='9'
+                    viewBox='0 0 9 9'
+                    fill='none'
+                    className='mt-2'
+                  >
+                    <path d='M1 1H8V8' stroke='black' strokeWidth='2' />
+                    <path d='M8 1L1 8' stroke='black' strokeWidth='2' />
+                  </svg>
                 </Link>
               ))}
             </div>
@@ -48,23 +50,25 @@ export const Questions = () => {
               Contact summer.
               <br /> Team whenever you need
             </p>
-            <div className='flex flex-col gap-5'>
+            <div className='flex flex-col items-start gap-5'>
               {['faq', 'discord', 'twitter'].map((i, index) => (
-                <Link key={index} href='https://www.google.com/'>
-                  <div className='font-headline flex gap-1 uppercase transition-transform duration-200 hover:scale-110'>
-                    <p>{i}</p>
-                    <svg
-                      xmlns='http://www.w3.org/2000/svg'
-                      width='9'
-                      height='9'
-                      viewBox='0 0 9 9'
-                      fill='none'
-                      className='mt-2'
-                    >
-                      <path d='M1 1H8V8' stroke='black' strokeWidth='2' />
-                      <path d='M8 1L1 8' stroke='black' strokeWidth='2' />
-                    </svg>
-                  </div>
+                <Link
+                  key={index}
+                  href='https://www.google.com/'
+                  className='font-headline flex flex-1 justify-start  gap-1 uppercase transition-transform duration-200 hover:scale-110'
+                >
+                  <p>{i}</p>
+                  <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    width='9'
+                    height='9'
+                    viewBox='0 0 9 9'
+                    fill='none'
+                    className='mt-2'
+                  >
+                    <path d='M1 1H8V8' stroke='black' strokeWidth='2' />
+                    <path d='M8 1L1 8' stroke='black' strokeWidth='2' />
+                  </svg>
                 </Link>
               ))}
             </div>
